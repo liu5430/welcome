@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+			mui('.mui-off-canvas-wrap').offCanvas('show');
+		</script>
+		<style>
+			.swiper-container {
+				width: 100%;
+				height:auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- 主界面不动、菜单移动 -->
+		<!-- 侧滑导航根容器 -->
+		<div class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+			<!-- 菜单容器 -->
+			<aside class="mui-off-canvas-left" id="offCanvasSide">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<!-- 菜单具体展示内容 -->
+						123
+					</div>
+				</div>
+			</aside>
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap">
+				<!-- 主页面标题 -->
+				<header class="mui-bar mui-bar-nav">
+					<a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left" href="#offCanvasSide"></a>
+					<div class="mui-title  ">
+						<i class="mui-icon mui-icon-search"></i>
+						<input type="text"  class="sch-txt" placeholder="输入您要搜索的商品">
+					</div>
+					<a class="mui-icon mui-icon-plus mui-pull-right" href="#"></a>
+				</header>
+				<nav class="mui-bar mui-bar-tab">
+					<a class="mui-tab-item mui-active">
+						<span class="mui-icon mui-icon-search"></span>
+						<span class="mui-tab-label">首页</span>
+					</a>
+					<a class="mui-tab-item">
+						<span class="mui-icon mui-icon-phone"></span>
+						<span class="mui-tab-label">分类</span>
+					</a>
+					<a class="mui-tab-item">
+						<span class="mui-icon mui-icon-email"></span>
+						<span class="mui-tab-label">购物车</span>
+					</a>
+					<a class="mui-tab-item">
+						<span class="mui-icon mui-icon-gear"></span>
+						<span class="mui-tab-label">我的</span>
+					</a>
+				</nav>
+				<div class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<!-- 主界面具体展示内容 -->
+						<!--轮播-->
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="#"><img src="images/banner.jpg" style="width: 100%;"/></a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#"><img src="images/banner.jpg" style="width: 100%;"/></a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#"><img src="images/banner.jpg" style="width: 100%;"/></a>
+								</div>
+							</div>
+						</div>
+						<!--导航-->
+						<ul class="nav-con">
+							<li>
+								<a href="#">
+									<img src="" alt="" />
+									<p></p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="" alt="" />
+									<p></p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="" alt="" />
+									<p></p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="" alt="" />
+									<p></p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="mui-off-canvas-backdrop"></div>
+			</div>
+		</div>
+
+		<script src="js/swiper.min.js"></script>
+		<script>
+			window.onload = function() {
+				var mySwiper = new Swiper('.swiper-container', {
+					direction: 'horizontal',
+					loop: true,
+				})
+			}
+		</script>
+	</body>
+
+</html>
